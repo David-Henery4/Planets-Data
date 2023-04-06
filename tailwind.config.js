@@ -2,6 +2,9 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
+    screens: {
+      smMob: "28.75em", // 660px
+    },
     colors: {
       white: "#ffffff",
       darkNavy: "#070724",

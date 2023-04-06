@@ -17,7 +17,7 @@ function App() {
           <MobileOptions />
         </section>
 
-        <section className="w-full px-6 pb-12">
+        <section className="w-full px-6 pb-12 smMob:px-10 smMob:pb-10">
           <PlanetContainer />
           <TitleAndDesc/>
           <Stats/>
