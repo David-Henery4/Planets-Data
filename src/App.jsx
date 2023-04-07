@@ -4,6 +4,7 @@ import {
   PlanetContainer,
   TitleAndDesc,
   Stats,
+  Options,
 } from "./components";
 
 function App() {
@@ -17,10 +18,11 @@ function App() {
           <MobileOptions />
         </section>
 
-        <section className="w-full px-6 pb-12 smMob:px-10 smMob:pb-10">
+        <section className="w-full px-6 pb-12 smMob:px-10 smMob:pb-10 smTab:grid smTab:grid-cols-tabGrid">
           <PlanetContainer />
           <TitleAndDesc/>
           <Stats/>
+          <Options/>
         </section>
       </main>
     </div>

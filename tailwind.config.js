@@ -3,7 +3,9 @@ export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
     screens: {
-      smMob: "28.75em", // 660px
+      smMob: "28.75em", // 460px
+      smTab: "42.18em", // 675px
+      tab: "48em", // 768px
     },
     colors: {
       white: "#ffffff",
@@ -30,6 +32,9 @@ export default {
         11: "11px",
         9: "9px",
         8: "8px",
+      },
+      gridTemplateColumns: {
+        tabGrid: "1fr 1fr 1fr 70px 1fr 1fr",
       },
     },
   },
