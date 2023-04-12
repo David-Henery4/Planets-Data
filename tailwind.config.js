@@ -6,6 +6,8 @@ export default {
       smMob: "28.75em", // 460px
       smTab: "42.18em", // 675px
       tab: "48em", // 768px
+      lap: "64.06em", // 1025px
+      desk: "69.37em", // 1110px
     },
     colors: {
       white: "#ffffff",

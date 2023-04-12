@@ -18,7 +18,7 @@ function App() {
           <MobileOptions />
         </section>
 
-        <section className="w-full px-6 pb-12 smMob:px-10 smMob:pb-10 smTab:grid smTab:grid-cols-tabGrid">
+        <section className="w-full px-6 pb-12 smMob:px-10 smMob:pb-10 smTab:grid smTab:grid-cols-tabGrid lap:max-w-[1110px] lap:mx-auto desk:px-0">
           <PlanetContainer />
           <TitleAndDesc/>
           <Stats/>
