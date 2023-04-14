@@ -36,7 +36,7 @@
       }
     ],
     "images": {
-      "planet": "./assets/planet-mercury.svg",
+      "planet": "planet-mercury.svg",
       "internal": "./assets/planet-mercury-internal.svg",
       "geology": "./assets/geology-mercury.png"
     }
