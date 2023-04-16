@@ -8,6 +8,7 @@ import {
   Stats,
   Options,
 } from "./components";
+import {StarsBackground} from "./assets"
 
 function App() {
   const [currentPlanetIndex, setCurrentPlanetIndex] = useState(0);
@@ -24,13 +25,13 @@ function App() {
   //
   return (
     <div className="App bg-darkNavy text-white font-spartan">
-      <main>
+      <main className="relative overflow-hidden">
+        <StarsBackground className="absolute -top-[125px] -left-10"/>
         {/* NAV SECTION */}
         <section className="w-full">
           <Navbar setCurrentPlanetIndex={setCurrentPlanetIndex} />
           <MobileOptions />
         </section>
-
         <section className="w-full px-6 pb-12 smMob:px-10 smMob:pb-10 smTab:grid smTab:grid-cols-tabGrid lap:max-w-[1110px] lap:mx-auto desk:px-0">
           <PlanetContainer
             {...currentPlanet}
