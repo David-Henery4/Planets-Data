@@ -26,10 +26,12 @@ function App() {
   return (
     <div className="App bg-darkNavy text-white font-spartan">
       <main className="relative overflow-hidden">
-        <StarsBackground className="absolute -top-[125px] -left-10"/>
+        <StarsBackground className="absolute -top-[125px] -left-10 pointer-events-none" />
         {/* NAV SECTION */}
         <section className="w-full">
-          <Navbar setCurrentPlanetIndex={setCurrentPlanetIndex} />
+          <Navbar
+            setCurrentPlanetIndex={setCurrentPlanetIndex}
+          />
           <MobileOptions />
         </section>
         <section className="w-full px-6 pb-12 smMob:px-10 smMob:pb-10 smTab:grid smTab:grid-cols-tabGrid lap:max-w-[1110px] lap:mx-auto desk:px-0">
@@ -51,6 +53,12 @@ function App() {
           />
           <Stats {...currentPlanet} />
           <Options
+            {...currentPlanet}
+            modes={{
+              isGeologyMode,
+              isOverviewMode,
+              isStructureMode,
+            }}
             setModes={{
               setIsGeologyMode,
               setIsOverviewMode,

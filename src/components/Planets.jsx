@@ -1,4 +1,5 @@
 import PlanetData from "../../data.json";
+import colourSelection from "../reuseableFunctions/colourSelection";
 
 const Planets = ({ setCurrentPlanetIndex }) => {
   //
@@ -8,10 +9,11 @@ const Planets = ({ setCurrentPlanetIndex }) => {
         return (
           <li
             key={i}
-            className="text-11 font-bold leading-6 tracking-[1px] uppercase"
+            className="relative text-11 text-white/75 font-bold leading-6 tracking-[1px] uppercase group hover:text-white"
             onClick={() => setCurrentPlanetIndex(i)}
           >
-            <a href="#">{planet.name}</a>
+            <div className={`absolute hidden -bottom-[120%] left-0 w-full h-1 group-hover:block lap:-bottom-0 lap:-top-[150%] ${colourSelection(planet?.name)} `}></div>
+            <a href="#">{planet?.name}</a>
           </li>
         );
       })}
