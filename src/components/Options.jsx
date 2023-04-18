@@ -7,7 +7,7 @@ const Options = ({ setModes, colourBg, modes, name }) => {
   return (
     <div className="hidden w-full text-left smTab:grid smTab:gap-4 smTab:col-start-5 smTab:col-end-7 smTab:self-center lap:self-start">
       <button
-        className={`w-full text-xs px-5 py-2 inline-flex justify-start items-center gap-4 border border-white/20 lap:px-7 lap:py-3 ${
+        className={`w-full text-xs px-5 py-2 inline-flex justify-start items-center gap-4 border border-white/20 lap:px-7 lap:py-3 hover:bg-btnHover/20 ${
           isOverviewMode ? colourSelection(name) : "bg-none"
         }`}
         onClick={() => {
@@ -20,7 +20,7 @@ const Options = ({ setModes, colourBg, modes, name }) => {
         OVERVIEW
       </button>
       <button
-        className={`w-full text-xs px-5 py-2 gap-4 border border-white/20 inline-flex justify-start items-center lap:px-7 lap:py-3 ${
+        className={`w-full text-xs px-5 py-2 gap-4 border border-white/20 inline-flex justify-start items-center lap:px-7 lap:py-3 hover:bg-btnHover/20 ${
           isStructureMode ? colourSelection(name) : "bg-none"
         }`}
         onClick={() => {
@@ -33,7 +33,7 @@ const Options = ({ setModes, colourBg, modes, name }) => {
         INTERNAL STRUCTURE
       </button>
       <button
-        className={`w-full text-xs px-5 py-2 gap-4 border border-white/20 inline-flex justify-start items-center lap:px-7 lap:py-3 ${
+        className={`w-full text-xs px-5 py-2 gap-4 border border-white/20 inline-flex justify-start items-center lap:px-7 lap:py-3 hover:bg-btnHover/20 ${
           isGeologyMode ? colourSelection(name) : "bg-none"
         }`}
         onClick={() => {

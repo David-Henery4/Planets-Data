@@ -30,6 +30,7 @@ export default {
       red: "#D83A34",
       mintGreen: "#1EC1A2",
       brightBlue: "#2D68F0",
+      btnHover: "#D8D8D8",
     },
     fontFamily: {
       antonio: "'Antonio', sans-serif",

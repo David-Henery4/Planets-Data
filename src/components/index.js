@@ -4,6 +4,7 @@ import PlanetContainer from "./PlanetContainer";
 import TitleAndDesc from "./TitleAndDesc";
 import Stats from "./Stats";
 import Options from "./Options";
+import Sidebar from "./Sidebar";
 
 export {
   Navbar,
@@ -12,4 +13,5 @@ export {
   TitleAndDesc,
   Stats,
   Options,
+  Sidebar,
 }

@@ -7,6 +7,7 @@ import {
   TitleAndDesc,
   Stats,
   Options,
+  Sidebar
 } from "./components";
 import {StarsBackground} from "./assets"
 
@@ -18,6 +19,7 @@ function App() {
   const [isOverviewMode, setIsOverviewMode] = useState(true);
   const [isStructureMode, setIsStructureMode] = useState(false);
   const [isGeologyMode, setIsGeologyMode] = useState(false);
+  const [isSidebarActive,setIsSidebarActive] = useState(false)
   //
   useEffect(() => {
     setCurrentPlanet(planetData[currentPlanetIndex]);
@@ -31,10 +33,23 @@ function App() {
         <section className="w-full">
           <Navbar
             setCurrentPlanetIndex={setCurrentPlanetIndex}
+            setIsSidebarActive={setIsSidebarActive}
+            isSidebarActive={isSidebarActive}
           />
-          <MobileOptions />
+          <MobileOptions
+            setModes={{
+              setIsGeologyMode,
+              setIsOverviewMode,
+              setIsStructureMode,
+            }}
+          />
         </section>
-        <section className="w-full px-6 pb-12 smMob:px-10 smMob:pb-10 smTab:grid smTab:grid-cols-tabGrid lap:max-w-[1110px] lap:mx-auto desk:px-0">
+        <section className="relative w-full px-6 pb-12 smMob:px-10 smMob:pb-10 smTab:grid smTab:grid-cols-tabGrid lap:max-w-[1110px] lap:mx-auto desk:px-0">
+          <Sidebar
+            setIsSidebarActive={setIsSidebarActive}
+            isSidebarActive={isSidebarActive}
+            setCurrentPlanetIndex={setCurrentPlanetIndex}
+          />
           <PlanetContainer
             {...currentPlanet}
             modes={{
