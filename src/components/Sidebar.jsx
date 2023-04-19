@@ -1,6 +1,8 @@
 import planetData from "../../data.json";
 import { ArrowRight } from "../assets";
 import colourSelection from "../reuseableFunctions/colourSelection";
+import useMediaQuery from "../hooks/useMediaQuery";
+import { useEffect } from "react";
 
 const Sidebar = ({
   setIsSidebarActive,
@@ -8,9 +10,15 @@ const Sidebar = ({
   setCurrentPlanetIndex,
 }) => {
   //
+  const isDesktop = useMediaQuery("(min-width:42.18em)");
+  //
+  useEffect(() => {
+    if (isDesktop) setIsSidebarActive(false)
+  },[isDesktop])
+  //
   return (
     <aside
-      className={`absolute w-full h-[calc(100%+54px)] transition-all -top-[54px] left-0 p-6 bg-darkNavy flex flex-col justify-start items-start smMob:-top-[73px] smMob:h-[calc(100%+73px)] ${
+      className={`absolute z-50 w-full h-[calc(100%+54px)] transition-all -top-[54px] left-0 p-6 bg-darkNavy flex flex-col justify-start items-start smMob:-top-[73px] smMob:h-[calc(100%+73px)] smTab:hidden ${
         isSidebarActive ? "-translate-x-0" : "-translate-x-full"
       }`}
     >

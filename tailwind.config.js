@@ -8,6 +8,7 @@ export default {
       tab: "48em", // 768px
       lap: "64.06em", // 1025px
       desk: "69.37em", // 1110px
+      lgDesk: "80.31em", // 1285px
     },
     colors: {
       white: "#ffffff",

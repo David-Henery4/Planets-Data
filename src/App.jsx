@@ -37,6 +37,12 @@ function App() {
             isSidebarActive={isSidebarActive}
           />
           <MobileOptions
+            {...currentPlanet}
+            modes={{
+              isGeologyMode,
+              isOverviewMode,
+              isStructureMode,
+            }}
             setModes={{
               setIsGeologyMode,
               setIsOverviewMode,
@@ -44,7 +50,7 @@ function App() {
             }}
           />
         </section>
-        <section className="relative w-full px-6 pb-12 smMob:px-10 smMob:pb-10 smTab:grid smTab:grid-cols-tabGrid lap:max-w-[1110px] lap:mx-auto desk:px-0">
+        <section className="relative w-full px-6 pb-12 smMob:px-10 smMob:pb-10 smTab:grid smTab:grid-cols-tabGrid lap:max-w-[1110px] lap:mx-auto lgDesk:px-0">
           <Sidebar
             setIsSidebarActive={setIsSidebarActive}
             isSidebarActive={isSidebarActive}
