@@ -6,9 +6,9 @@ const Stats = ({stats}) => {
       {stats.map(stat => {
         return (
           <div key={stat?.id} className="w-full px-6 py-3 flex justify-between items-center border border-white/25 smTab:flex-col smTab:p-4 smTab:items-start lap:gap-1 lap:pt-5 lap:px-6 lap:pb-7">
-            <h3 className="text-8 font-bold uppercase text-white/50 leading-4 tracking-[0.73px] smMob:text-11">
+            <h2 className="text-8 font-bold uppercase text-white/50 leading-4 tracking-[0.73px] smMob:text-11">
               {stat?.name}
-            </h3>
+            </h2>
             <p className="text-xl font-normal font-antonio -tracking-[0.75px] smMob:text-2xl lap:text-[40px]">
               {stat?.value}
             </p>

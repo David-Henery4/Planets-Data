@@ -39,7 +39,7 @@ const Sidebar = ({
                 )}`}
               ></div>
               <p
-                aria-label={`link to switch to ${plan?.name}s information page`}
+                aria-label="link to switch to planets information page"
                 className="text-base uppercase font-bold leading-6 tracking-[1.36px]"
               >
                 {plan?.name}
