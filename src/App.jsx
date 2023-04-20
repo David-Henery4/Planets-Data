@@ -30,7 +30,7 @@ function App() {
       <main className="relative overflow-hidden">
         <StarsBackground className="absolute -top-[125px] -left-10 pointer-events-none" />
         {/* NAV SECTION */}
-        <section className="w-full">
+        <div className="w-full">
           <Navbar
             setCurrentPlanetIndex={setCurrentPlanetIndex}
             setIsSidebarActive={setIsSidebarActive}
@@ -49,8 +49,8 @@ function App() {
               setIsStructureMode,
             }}
           />
-        </section>
-        <section className="relative w-full px-6 pb-12 smMob:px-10 smMob:pb-10 smTab:grid smTab:grid-cols-tabGrid lap:max-w-[1110px] lap:mx-auto lgDesk:px-0">
+        </div>
+        <div className="relative w-full px-6 pb-12 smMob:px-10 smMob:pb-10 smTab:grid smTab:grid-cols-tabGrid lap:max-w-[1110px] lap:mx-auto lgDesk:px-0">
           <Sidebar
             setIsSidebarActive={setIsSidebarActive}
             isSidebarActive={isSidebarActive}
@@ -86,7 +86,7 @@ function App() {
               setIsStructureMode,
             }}
           />
-        </section>
+        </div>
       </main>
     </div>
   );
