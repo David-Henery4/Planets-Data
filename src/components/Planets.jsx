@@ -13,7 +13,7 @@ const Planets = ({ setCurrentPlanetIndex }) => {
             onClick={() => setCurrentPlanetIndex(i)}
           >
             <div className={`absolute hidden -bottom-[120%] left-0 w-full h-1 group-hover:block lap:-bottom-0 lap:-top-[150%] ${colourSelection(planet?.name)} `}></div>
-            <p aria-label="link to switch to planets information page">{planet?.name}</p>
+            <p>{planet?.name}</p>
           </li>
         );
       })}
