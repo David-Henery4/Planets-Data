@@ -29,7 +29,7 @@ const Sidebar = ({
               key={i}
               className="flex gap-6 justify-start items-center py-5 border-b border-b-white/10 hover:cursor-pointer last:border-none last:pb-0"
               onClick={() => {
-                setCurrentPlanetIndex(i)
+                setCurrentPlanetIndex(i);
                 setIsSidebarActive(false);
               }}
             >
@@ -38,12 +38,12 @@ const Sidebar = ({
                   plan?.name
                 )}`}
               ></div>
-              <a
-                href="#"
+              <p
+                aria-label={`link to switch to ${plan?.name}s information page`}
                 className="text-base uppercase font-bold leading-6 tracking-[1.36px]"
               >
                 {plan?.name}
-              </a>
+              </p>
               <ArrowRight className="ml-auto" />
             </li>
           );

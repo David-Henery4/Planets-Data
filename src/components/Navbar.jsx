@@ -1,6 +1,6 @@
 import {HamburgerIcon} from "../assets";
 import Planets from "./Planets";
-import Sidebar from "./Sidebar";
+
 
 const Navbar = ({
   setCurrentPlanetIndex,
